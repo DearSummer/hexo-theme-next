@@ -1,12 +1,14 @@
 .back-to-top {
-  visibility: hidden;
-  margin: (20px - $sidebar-offset) -10px -20px;
-  background: $b2t-sidebar-bg-color;
+  display: none;
+  margin: 15px -10px -20px;
+  background: $body-bg-color;
   font-size: $b2t-font-size;
   opacity: $b2t-opacity;
   cursor: pointer;
   text-align: center;
-  &:hover { opacity: 0.8; }
+  -webkit-transform: translateZ(0);
+  the-transition();
+    &:hover { opacity: 0.8; }
 
   +tablet() {
     fixbutton() if hexo-config('sidebar.onmobile');
@@ -18,7 +20,6 @@
   }
 
   &.back-to-top-on {
-    visibility: visible;
-    the-transition();
+    display: block;
   }
 }
